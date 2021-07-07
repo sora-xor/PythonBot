@@ -2,7 +2,7 @@
 
 PythonBot is a simple bot that can execute swaps on Polkaswap!
 
-Just `pip install substrate-interface` and `pip install scalecodecP and you should be good to go.
+Just `pip install substrate-interface` and `pip install scalecodec` and you should be good to go.
 
 # LICENSE
 
