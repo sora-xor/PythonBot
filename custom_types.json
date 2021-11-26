@@ -1,5 +1,5 @@
 {
-  "runtime_id": 19,
+  "runtime_id": 18,
   "versioning": [
     {
       "runtime_range": [
@@ -731,8 +731,17 @@
         "MultiCurrencyBalance": "Balance",
         "MultiCurrencyBalanceOf": "MultiCurrencyBalance",
         "MultisigAccount": {
-          "signatories": "Vec<AccountId>",
-          "threshold": "u8"
+          "type": "struct",
+          "type_mapping": [
+            [
+              "signatories",
+              "Vec<AccountId>"
+            ],
+            [
+              "threshold",
+              "u8"
+            ]
+          ]
         },
         "OffchainRequest": {
           "type": "enum",
@@ -1617,6 +1626,10 @@
     [
       1744716,
       9
+    ],
+    [
+      2829626,
+      19
     ]
   ]
 }
