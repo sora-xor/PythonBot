@@ -1,5 +1,5 @@
 {
-  "runtime_id": 8,
+  "runtime_id": 19,
   "versioning": [
     {
       "runtime_range": [
@@ -730,7 +730,10 @@
         },
         "MultiCurrencyBalance": "Balance",
         "MultiCurrencyBalanceOf": "MultiCurrencyBalance",
-        "MultisigAccount": "Null",
+        "MultisigAccount": {
+          "signatories": "Vec<AccountId>",
+          "threshold": "u8"
+        },
         "OffchainRequest": {
           "type": "enum",
           "type_mapping": [
@@ -1566,7 +1569,6 @@
           ]
         },
         "ValidationFunction": "Null",
-        "Timepoint": "BridgeTimepoint",
         "BTreeMap<RewardReason,Balance>": "Vec<(RewardReason,Balance)>",
         "BTreeSet<SignatureParams>": "Vec<SignatureParams>",
         "BTreeSet<H256>": "Vec<H256>",
