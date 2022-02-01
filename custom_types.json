@@ -3,6 +3,27 @@
   "versioning": [
     {
       "runtime_range": [
+        1, 19
+      ],
+      "types": {
+        "BridgeTimepoint": {
+          "type": "struct",
+          "type_mapping": [
+            [
+              "height",
+              "MultiChainHeight"
+            ],
+            [
+              "index",
+              "u32"
+            ]
+          ]
+        },
+        "Timepoint": "BridgeTimepoint"
+      }
+    },
+    {
+      "runtime_range": [
         1,
         null
       ],
