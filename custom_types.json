@@ -1,27 +1,6 @@
 {
-  "runtime_id": 19,
+  "runtime_id": 23,
   "versioning": [
-    {
-      "runtime_range": [
-        1, 19
-      ],
-      "types": {
-        "BridgeTimepoint": {
-          "type": "struct",
-          "type_mapping": [
-            [
-              "height",
-              "MultiChainHeight"
-            ],
-            [
-              "index",
-              "u32"
-            ]
-          ]
-        },
-        "Timepoint": "BridgeTimepoint"
-      }
-    },
     {
       "runtime_range": [
         1,
@@ -132,7 +111,32 @@
             ]
           ]
         },
-        "ContentSource": "Vec<u8>",
+        "ContentSource": "Text",
+        "ContributionInfo": {
+          "type": "struct",
+          "type_mapping": [
+            [
+              "funds_contributed",
+              "Balance"
+            ],
+            [
+              "tokens_bought",
+              "Balance"
+            ],
+            [
+              "tokens_claimed",
+              "Balance"
+            ],
+            [
+              "claiming_finished",
+              "bool"
+            ],
+            [
+              "number_of_claims",
+              "u32"
+            ]
+          ]
+        },
         "CurrencyId": "AssetId",
         "CurrencyIdEncoded": {
           "type": "enum",
@@ -177,7 +181,7 @@
             ]
           ]
         },
-        "Description": "Vec<u8>",
+        "Description": "Text",
         "DispatchErrorWithPostInfoTPostDispatchInfo": {
           "type": "struct",
           "type_mapping": [
@@ -244,6 +248,99 @@
         "Fixed": "FixedU128",
         "FixedBytes": "Vec<u8>",
         "HolderId": "AccountId",
+        "ILOInfo": {
+          "type": "struct",
+          "type_mapping": [
+            [
+              "ilo_organizer",
+              "AccountId"
+            ],
+            [
+              "tokens_for_ilo",
+              "Balance"
+            ],
+            [
+              "tokens_for_liquidity",
+              "Balance"
+            ],
+            [
+              "ilo_price",
+              "Balance"
+            ],
+            [
+              "soft_cap",
+              "Balance"
+            ],
+            [
+              "hard_cap",
+              "Balance"
+            ],
+            [
+              "min_contribution",
+              "Balance"
+            ],
+            [
+              "max_contribution",
+              "Balance"
+            ],
+            [
+              "refund_type",
+              "bool"
+            ],
+            [
+              "liquidity_percent",
+              "Balance"
+            ],
+            [
+              "listing_price",
+              "Balance"
+            ],
+            [
+              "lockup_days",
+              "u32"
+            ],
+            [
+              "start_block",
+              "BlockNumber"
+            ],
+            [
+              "end_block",
+              "BlockNumber"
+            ],
+            [
+              "token_vesting",
+              "VestingInfo"
+            ],
+            [
+              "sold_tokens",
+              "Balance"
+            ],
+            [
+              "funds_raised",
+              "Balance"
+            ],
+            [
+              "succeeded",
+              "bool"
+            ],
+            [
+              "failed",
+              "bool"
+            ],
+            [
+              "lp_tokens",
+              "Balance"
+            ],
+            [
+              "claimed_lp_tokens",
+              "bool"
+            ],
+            [
+              "finish_block",
+              "BlockNumber"
+            ]
+          ]
+        },
         "IncomingAddToken": {
           "type": "struct",
           "type_mapping": [
@@ -1348,6 +1445,23 @@
         },
         "Permission": "Null",
         "PermissionId": "u32",
+        "PollInfo": {
+          "type": "struct",
+          "type_mapping": [
+            [
+              "number_of_options",
+              "u32"
+            ],
+            [
+              "poll_start_block",
+              "BlockNumber"
+            ],
+            [
+              "poll_end_block",
+              "BlockNumber"
+            ]
+          ]
+        },
         "PoolFarmer": {
           "type": "struct",
           "type_mapping": [
@@ -1677,6 +1791,23 @@
             ]
           ]
         },
+        "TokenLockInfo": {
+          "type": "struct",
+          "type_mapping": [
+            [
+              "tokens",
+              "Balance"
+            ],
+            [
+              "unlocking_block",
+              "BlockNumber"
+            ],
+            [
+              "asset_id",
+              "AssetId"
+            ]
+          ]
+        },
         "TradingPair": {
           "type": "struct",
           "type_mapping": [
@@ -1691,6 +1822,7 @@
           ]
         },
         "ValidationFunction": "Null",
+        "Timepoint": "BridgeTimepoint",
         "BTreeMap<RewardReason,Balance>": "Vec<(RewardReason,Balance)>",
         "BTreeSet<SignatureParams>": "Vec<SignatureParams>",
         "BTreeSet<H256>": "Vec<H256>",
@@ -1709,6 +1841,23 @@
             [
               "Err",
               "DispatchError"
+            ]
+          ]
+        },
+        "VotingInfo": {
+          "type": "struct",
+          "type_mapping": [
+            [
+              "voting_option",
+              "u32"
+            ],
+            [
+              "number_of_votes",
+              "Balance"
+            ],
+            [
+              "ceres_withdrawn",
+              "bool"
             ]
           ]
         }
@@ -1744,6 +1893,17 @@
       2829626,
       19
     ],
-    [3859200, 22]
+    [
+      3859200,
+      22
+    ],
+    [
+      3939851,
+      23
+    ],
+    [
+      4470062,
+      26
+    ]
   ]
 }
