@@ -1,6 +1,27 @@
 {
-  "runtime_id": 23,
+  "runtime_id": 29,
   "versioning": [
+    {
+      "runtime_range": [
+        1, 19
+      ],
+      "types": {
+        "BridgeTimepoint": {
+          "type": "struct",
+          "type_mapping": [
+            [
+              "height",
+              "MultiChainHeight"
+            ],
+            [
+              "index",
+              "u32"
+            ]
+          ]
+        },
+        "Timepoint": "BridgeTimepoint"
+      }
+    },
     {
       "runtime_range": [
         1,
@@ -69,8 +90,8 @@
         },
         "BalancePrecision": "u8",
         "BasisPoints": "u16",
-        "BridgeNetworkId": "u32",
         "NetworkId": "BridgeNetworkId",
+        "BridgeNetworkId": "u32",
         "BridgeStatus": {
           "type": "enum",
           "value_list": [
@@ -181,7 +202,7 @@
             ]
           ]
         },
-        "Description": "Text",
+        "Description": "Vec<u8>",
         "DispatchErrorWithPostInfoTPostDispatchInfo": {
           "type": "struct",
           "type_mapping": [
@@ -1741,7 +1762,6 @@
             ]
           ]
         },
-        "TechAccountIdPrimitive": "Null",
         "TechAmount": "Amount",
         "TechAssetId": {
           "type": "enum",
@@ -1822,7 +1842,6 @@
           ]
         },
         "ValidationFunction": "Null",
-        "Timepoint": "BridgeTimepoint",
         "BTreeMap<RewardReason,Balance>": "Vec<(RewardReason,Balance)>",
         "BTreeSet<SignatureParams>": "Vec<SignatureParams>",
         "BTreeSet<H256>": "Vec<H256>",
@@ -1870,40 +1889,100 @@
       1
     ],
     [
-      489600,
+      12210,
+      2
+    ],
+    [
+      28959,
       3
     ],
     [
-      616533,
+      105369,
       4
     ],
     [
-      1243341,
-      7
+      663113,
+      5
     ],
     [
-      1403659,
+      789225,
+      6
+    ],
+    [
+      1043192,
       8
     ],
     [
-      1744716,
+      1374881,
       9
     ],
     [
-      2829626,
+      1908443,
+      10
+    ],
+    [
+      1961693,
+      11
+    ],
+    [
+      2076491,
+      12
+    ],
+    [
+      2240075,
+      13
+    ],
+    [
+      2352856,
+      14
+    ],
+    [
+      2382337,
+      15
+    ],
+    [
+      2455618,
+      16
+    ],
+    [
+      2484057,
+      17
+    ],
+    [
+      2486688,
+      18
+    ],
+    [
+      2495810,
       19
     ],
     [
-      3859200,
+      2998701,
+      20
+    ],
+    [
+      3401067,
+      21
+    ],
+    [
+      3450465,
       22
     ],
     [
-      3939851,
+      3643432,
       23
     ],
     [
       4470062,
       26
+    ],
+    [
+      4652184,
+      29
+    ],
+    [
+      4710795,
+      30
     ]
   ]
 }
