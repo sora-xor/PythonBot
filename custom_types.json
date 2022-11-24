@@ -1,5 +1,5 @@
 {
-    "runtime_id": 32,
+    "runtime_id": 37,
     "versioning": [
         {
             "runtime_range": [
@@ -2718,6 +2718,217 @@
                         [
                             "rewards",
                             "Balance"
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "runtime_range": [
+                35,
+                null
+            ],
+            "types": {
+                "LiquiditySourceIdOf": {
+                    "type": "struct",
+                    "type_mapping": [
+                        [
+                            "dex_id",
+                            "DEXId"
+                        ],
+                        [
+                            "liquidity_source_index",
+                            "LiquiditySourceType"
+                        ]
+                    ]
+                },
+                "ContributorsVesting": {
+                    "type": "struct",
+                    "type_mapping": [
+                        [
+                            "first_release_percent",
+                            "Balance"
+                        ],
+                        [
+                            "vesting_period",
+                            "Moment"
+                        ],
+                        [
+                            "vesting_percent",
+                            "Balance"
+                        ]
+                    ]
+                },
+                "ILOInfo": {
+                    "type": "struct",
+                    "type_mapping": [
+                        [
+                            "ilo_organizer",
+                            "AccountId"
+                        ],
+                        [
+                            "tokens_for_ilo",
+                            "Balance"
+                        ],
+                        [
+                            "tokens_for_liquidity",
+                            "Balance"
+                        ],
+                        [
+                            "ilo_price",
+                            "Balance"
+                        ],
+                        [
+                            "soft_cap",
+                            "Balance"
+                        ],
+                        [
+                            "hard_cap",
+                            "Balance"
+                        ],
+                        [
+                            "min_contribution",
+                            "Balance"
+                        ],
+                        [
+                            "max_contribution",
+                            "Balance"
+                        ],
+                        [
+                            "refund_type",
+                            "bool"
+                        ],
+                        [
+                            "liquidity_percent",
+                            "Balance"
+                        ],
+                        [
+                            "listing_price",
+                            "Balance"
+                        ],
+                        [
+                            "lockup_days",
+                            "u32"
+                        ],
+                        [
+                            "start_timestamp",
+                            "Moment"
+                        ],
+                        [
+                            "end_timestamp",
+                            "Moment"
+                        ],
+                        [
+                            "contributors_vesting",
+                            "ContributorsVesting"
+                        ],
+                        [
+                            "team_vesting",
+                            "TeamVesting"
+                        ],
+                        [
+                            "sold_tokens",
+                            "Balance"
+                        ],
+                        [
+                            "funds_raised",
+                            "Balance"
+                        ],
+                        [
+                            "succeeded",
+                            "bool"
+                        ],
+                        [
+                            "failed",
+                            "bool"
+                        ],
+                        [
+                            "lp_tokens",
+                            "Balance"
+                        ],
+                        [
+                            "claimed_lp_tokens",
+                            "bool"
+                        ],
+                        [
+                            "finish_timestamp",
+                            "Moment"
+                        ]
+                    ]
+                },
+                "LockInfo": {
+                    "type": "struct",
+                    "type_mapping": [
+                        [
+                            "pool_tokens",
+                            "Balance"
+                        ],
+                        [
+                            "unlocking_timestamp",
+                            "Moment"
+                        ],
+                        [
+                            "asset_a",
+                            "AssetId"
+                        ],
+                        [
+                            "asset_b",
+                            "AssetId"
+                        ]
+                    ]
+                },
+                "PollInfo": {
+                    "type": "struct",
+                    "type_mapping": [
+                        [
+                            "number_of_options",
+                            "u32"
+                        ],
+                        [
+                            "poll_start_timestamp",
+                            "Moment"
+                        ],
+                        [
+                            "poll_end_timestamp",
+                            "Moment"
+                        ]
+                    ]
+                },
+                "TeamVesting": {
+                    "type": "struct",
+                    "type_mapping": [
+                        [
+                            "team_vesting_total_tokens",
+                            "Balance"
+                        ],
+                        [
+                            "team_vesting_first_release_percent",
+                            "Balance"
+                        ],
+                        [
+                            "team_vesting_period",
+                            "Moment"
+                        ],
+                        [
+                            "team_vesting_percent",
+                            "Balance"
+                        ]
+                    ]
+                },
+                "TokenLockInfo": {
+                    "type": "struct",
+                    "type_mapping": [
+                        [
+                            "tokens",
+                            "Balance"
+                        ],
+                        [
+                            "unlocking_timestamp",
+                            "Moment"
+                        ],
+                        [
+                            "asset_id",
+                            "AssetId"
                         ]
                     ]
                 }
