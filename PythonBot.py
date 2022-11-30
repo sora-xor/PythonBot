@@ -18,9 +18,9 @@ call = substrate.compose_call(
     call_function='swap',
     call_params={
         'dex_id': '0',
-        'input_asset_id': '0x0200050000000000000000000000000000000000000000000000000000000000',
-        'output_asset_id': '0x0200000000000000000000000000000000000000000000000000000000000000',
-        'swap_amount': {'WithDesiredInput': {'desired_amount_in': '13370000000000000000000', 'min_amount_out': '0'}},
+        'input_asset_id': {'code': '0x0200050000000000000000000000000000000000000000000000000000000000'},
+        'output_asset_id': {'code': '0x0200000000000000000000000000000000000000000000000000000000000000'},
+        'swap_amount': {'WithDesiredInput': ('13370000000000000000000', '1')}, # desired_amount_in & min_amount_out
         'selected_source_types': ["XYKPool","MulticollateralBondingCurvePool"],
         'filter_mode': 'AllowSelected'
     }
