@@ -1,2 +1,2 @@
-scalecodec==1.1.1
+scalecodec==1.1.2
 substrate_interface==1.2.7
